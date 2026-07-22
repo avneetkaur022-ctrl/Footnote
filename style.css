@@ -122,3 +122,121 @@ footer {
     gap: 18px;
   }
 }
+
+/* ===== THREE LENSES EXPERIENCE ===== */
+
+.lenses-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 7%;
+}
+
+.lenses-intro {
+  max-width: 760px;
+  margin-bottom: 60px;
+}
+
+.lenses-intro h2 {
+  font-size: clamp(38px, 7vw, 72px);
+  line-height: 1;
+  letter-spacing: -3px;
+  margin: 15px 0 25px;
+}
+
+.lenses-intro p {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 650px;
+}
+
+.lens-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 35px 0;
+}
+
+.lens-button {
+  background: transparent;
+  border: 1px solid #171717;
+  padding: 11px 18px;
+  font: inherit;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.lens-button:hover,
+.lens-button.active {
+  background: #171717;
+  color: white;
+}
+
+.lens-stage {
+  border-top: 1px solid #171717;
+  border-bottom: 1px solid #171717;
+  padding: 50px 0;
+  min-height: 300px;
+}
+
+.lens {
+  display: none;
+  animation: lensReveal 0.45s ease;
+}
+
+.lens.active {
+  display: block;
+}
+
+.lens-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.lens h3 {
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 1.1;
+  max-width: 750px;
+  margin-bottom: 25px;
+}
+
+.lens p {
+  max-width: 680px;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.lens-question {
+  margin-top: 35px;
+  padding-left: 20px;
+  border-left: 2px solid #171717;
+  font-style: italic;
+}
+
+@keyframes lensReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .lenses-page {
+    padding: 50px 6%;
+  }
+
+  .lenses-intro h2 {
+    letter-spacing: -2px;
+  }
+
+  .lens-button {
+    flex: 1;
+    min-width: 120px;
+  }
+}
