@@ -460,3 +460,106 @@ body.dark-mode .chat-header,
 body.dark-mode .chat-input {
   border-color: #555;
 }
+/* =========================
+   THOUGHT WALL HOMEPAGE
+   ========================= */
+
+.thought-wall-preview {
+  position: relative;
+  margin: 100px 0 40px;
+  padding: 90px 7%;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  overflow: hidden;
+}
+
+.wall-preview-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.thought-wall-preview h2 {
+  max-width: 900px;
+  margin: 0 0 35px;
+
+  font-size: clamp(48px, 8vw, 105px);
+  font-weight: normal;
+  line-height: 0.95;
+  letter-spacing: -2px;
+}
+
+.thought-wall-preview > p:not(.wall-preview-label) {
+  max-width: 520px;
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 45px;
+}
+
+.wall-enter {
+  display: inline-block;
+
+  border: 1px solid currentColor;
+  padding: 14px 20px;
+
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.wall-enter:hover {
+  background: #111;
+  color: #f5f1e8;
+  transform: rotate(-1deg);
+}
+
+/* little editorial mark */
+
+.thought-wall-preview::after {
+  content: "READ BETWEEN THE LINES";
+
+  position: absolute;
+  right: 5%;
+  top: 55%;
+
+  padding: 9px 12px;
+  border: 1px solid currentColor;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+
+  transform: rotate(7deg);
+  opacity: 0.55;
+}
+
+/* Dark mode */
+
+body.dark-mode .wall-enter:hover {
+  background: #f5f1e8;
+  color: #111;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .thought-wall-preview {
+    padding: 70px 7%;
+    margin-top: 70px;
+  }
+
+  .thought-wall-preview h2 {
+    font-size: 48px;
+    letter-spacing: -1px;
+  }
+
+  .thought-wall-preview::after {
+    position: static;
+    display: inline-block;
+    margin-top: 45px;
+    transform: rotate(3deg);
+  }
+}
