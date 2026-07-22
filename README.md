@@ -1,27 +1,44 @@
 # Footnote
 
-> Every headline has a footnote.
+Exploring the context, questions, and stories headlines leave behind.
 
-Footnote is an experimental storytelling project built around a simple question: what gets left out when a story becomes a headline?
+## What is Footnote?
 
-Instead of only presenting what happened, Footnote lets readers look beyond the headline — at context, overlooked perspectives, unanswered questions, and what happens after public attention moves on.
+Footnote is a small web project built around a simple idea: a headline is rarely the whole story.
 
-## The Demo
+It is a place to look beyond what happened and explore the context, perspectives, and questions that can easily get left out of a headline.
 
-This prototype explores a protest through multiple lenses. Readers can move from the headline to the wider story and switch between different ways of looking at the same event.
+## Why I made it
 
-The goal isn't to tell readers what to think. It's to make it harder to stop at the headline.
+I made Footnote because I often read a headline and end up with more questions than answers.
 
-## Why I Built It
+News can tell us what happened, but I also want to know what came before it, what might be getting overlooked, and what happens after everyone stops talking about it. I wanted to build a space around those questions instead of just repeating the headline.
 
-I kept noticing that some of the most interesting questions begin where news coverage ends. A protest may disappear from the news cycle while the people, demands, and consequences behind it continue.
+That's where the name Footnote came from — because every headline has something underneath it.
 
-Footnote is my attempt to turn that idea into an interactive experience.
+## How to use it
 
-## Built With
+Start from the homepage and explore the different sections.
 
-HTML, CSS, JavaScript, and GitHub Pages.
+The Stories section contains topics that go beyond the original headline. You can also use Three Lenses to look at an issue from different perspectives and think about how the same story can change depending on the way we approach it.
 
-## Status
+## How it works
 
-This is an early prototype. I want to keep experimenting with new stories, perspectives, and interactive ways of exploring context.
+Footnote is a static website made with HTML, CSS, and JavaScript.
+
+The different HTML pages handle the homepage, stories, and other parts of the project. CSS controls the visual design and layout, while JavaScript is used for the interactive parts of the site.
+
+The project is hosted using GitHub Pages.
+
+## Tech stack
+
+- HTML
+- CSS
+- JavaScript
+- GitHub Pages
+
+## What I learned
+
+This was one of my first attempts at turning an idea into an actual working website. I learned how separate HTML pages connect, how CSS can completely change the feeling of a site, and how to deploy a project so other people can actually use it.
+
+There are still things I want to improve, but this is the first working version of Footnote.
