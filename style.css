@@ -239,4 +239,54 @@ footer {
     flex: 1;
     min-width: 120px;
   }
+}/* ABOUT PAGE */
+
+.about-page {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 90px 8%;
+}
+
+.about-page > p:first-child {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  opacity: 0.6;
+}
+
+.about-page h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 5vw, 58px);
+  font-weight: 400;
+  line-height: 1.05;
+  margin: 55px 0 25px;
+  letter-spacing: -1.5px;
+}
+
+.about-page h2:first-of-type {
+  margin-top: 0;
+}
+
+.about-page p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  max-width: 700px;
+}
+
+.about-page h2:not(:first-of-type) {
+  border-top: 1px solid #bbb;
+  padding-top: 45px;
+  margin-top: 60px;
+}
+
+@media (max-width: 600px) {
+  .about-page {
+    padding: 60px 7%;
+  }
+
+  .about-page p {
+    font-size: 16px;
+  }
 }
