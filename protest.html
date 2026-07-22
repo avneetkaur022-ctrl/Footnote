@@ -6,6 +6,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>What Happens After the Protest Ends? — Footnote</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .story {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 80px 0;
+    }
+
+    .story-label {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    .story h2 {
+      font-size: clamp(45px, 8vw, 82px);
+      line-height: 0.98;
+      font-weight: normal;
+      margin-bottom: 25px;
+    }
+
+    .story-intro {
+      font-size: 21px;
+      line-height: 1.6;
+      max-width: 700px;
+      margin-bottom: 50px;
+    }
+
+    .story-block {
+      padding: 35px 0;
+      border-top: 1px solid #777;
+    }
+
+    .story-block h3 {
+      font-size: 30px;
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+
+    .story-block p {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .context-button {
+      background: transparent;
+      border: 1px solid #171717;
+      padding: 12px 18px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+
+    .context-button:hover {
+      background: #171717;
+      color: #f4f0e8;
+    }
+
+    .context {
+      display: none;
+      margin-top: 20px;
+      padding: 22px;
+      border-left: 3px solid #171717;
+      background: rgba(0, 0, 0, 0.04);
+    }
+
+    .context.open {
+      display: block;
+    }
+
+    .context-title {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .question {
+      margin: 55px 0;
+      padding: 40px 0;
+      border-top: 1px solid #171717;
+      border-bottom: 1px solid #171717;
+    }
+
+    .question span {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+    }
+
+    .question h3 {
+      font-size: 38px;
+      font-weight: normal;
+      line-height: 1.2;
+      margin-top: 15px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 40px;
+      color: #171717;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .story {
+        padding: 50px 0;
+      }
+
+      .story-intro {
+        font-size: 18px;
+      }
+
+      .question h3 {
+        font-size: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -22,31 +145,125 @@
 
 <main>
 
-  <section>
-    <p>POLITICS & SOCIETY</p>
+  <article class="story">
+
+    <a class="back-link" href="stories.html">← ALL STORIES</a>
+
+    <p class="story-label">POLITICS & SOCIETY · FOOTNOTE 001</p>
 
     <h2>What happens after the protest ends?</h2>
 
-    <p>
-      Movements make headlines. But what happens when the cameras leave?
+    <p class="story-intro">
+      Movements make headlines. But the moment the cameras leave,
+      a harder question begins: what actually changed?
     </p>
 
-    <p>
-      Footnote looks beyond the moment that makes the news — at what came
-      before it, what remains afterward, and the questions that disappear
-      when public attention moves somewhere else.
-    </p>
+    <section class="story-block">
+      <h3>The headline</h3>
 
-    <p>
-      A protest may end on the street, but the story rarely ends with it.
-    </p>
-  </section>
+      <p>
+        Protests are often remembered through their biggest moments:
+        crowds, speeches, demands and political responses.
+      </p>
+
+      <p>
+        But a headline captures a moment. It rarely captures the entire story.
+      </p>
+    </section>
+
+    <section class="story-block">
+      <h3>The context</h3>
+
+      <p>
+        Public movements usually begin long before they become national
+        news. Political decisions, local frustrations and years of debate
+        can sit behind a single day of demonstrations.
+      </p>
+
+      <button class="context-button" onclick="toggleContext('context1', this)">
+        UNFOLD THE FOOTNOTE +
+      </button>
+
+      <div class="context" id="context1">
+        <p class="context-title">THE FOOTNOTE</p>
+
+        <p>
+          When reading about a protest, the date of the demonstration is
+          often less important than the timeline that produced it. Looking
+          backward can reveal why a demand exists in the first place.
+        </p>
+      </div>
+    </section>
+
+    <section class="story-block">
+      <h3>The missing voice</h3>
+
+      <p>
+        National coverage can focus on politicians, institutions and
+        dramatic moments while the people most directly affected receive
+        far less space.
+      </p>
+
+      <button class="context-button" onclick="toggleContext('context2', this)">
+        UNFOLD THE FOOTNOTE +
+      </button>
+
+      <div class="context" id="context2">
+        <p class="context-title">LOOK AGAIN</p>
+
+        <p>
+          Ask who is being quoted, who is being described by somebody else,
+          and whose perspective is absent altogether. Sometimes what is
+          missing tells us as much as what is included.
+        </p>
+      </div>
+    </section>
+
+    <div class="question">
+      <span>THE QUESTION</span>
+
+      <h3>
+        If attention disappears before change arrives,
+        when does a protest really end?
+      </h3>
+    </div>
+
+    <section class="story-block">
+      <h3>The Footnote</h3>
+
+      <p>
+        The end of a demonstration is not necessarily the end of a movement.
+        Laws, negotiations, public memory and unresolved demands can continue
+        long after a story disappears from the front page.
+      </p>
+
+      <p>
+        Maybe the better way to understand a protest is not to ask only
+        what happened that day, but what happens after everyone stops watching.
+      </p>
+    </section>
+
+  </article>
 
 </main>
 
 <footer>
   <p>Footnote — Look beyond the headline.</p>
 </footer>
+
+<script>
+  function toggleContext(id, button) {
+    const context = document.getElementById(id);
+
+    context.classList.toggle("open");
+
+    if (context.classList.contains("open")) {
+      button.textContent = "FOLD THE FOOTNOTE −";
+    } else {
+      button.textContent = "UNFOLD THE FOOTNOTE +";
+    }
+  }
+</script>
 
 </body>
 </html>
