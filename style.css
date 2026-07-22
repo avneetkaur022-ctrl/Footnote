@@ -290,3 +290,119 @@ footer {
     font-size: 16px;
   }
 }
+/* ASK FOOTNOTE ASSISTANT */
+
+#ask-footnote-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+
+  border: 1px solid #111;
+  background: #111;
+  color: white;
+
+  padding: 14px 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+#footnote-chat {
+  position: fixed;
+  right: 24px;
+  bottom: 85px;
+
+  width: min(380px, calc(100vw - 48px));
+  max-height: 70vh;
+
+  background: white;
+  border: 1px solid #111;
+  z-index: 9999;
+
+  display: none;
+  flex-direction: column;
+}
+
+#footnote-chat.open {
+  display: flex;
+}
+
+.chat-header {
+  padding: 18px;
+  border-bottom: 1px solid #111;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header strong {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+#close-chat {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.chat-messages {
+  padding: 20px;
+  overflow-y: auto;
+  min-height: 220px;
+}
+
+.assistant-message,
+.user-message {
+  margin-bottom: 16px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.assistant-message {
+  padding-right: 30px;
+}
+
+.user-message {
+  margin-left: 40px;
+  padding: 12px;
+  background: #f1f1f1;
+}
+
+.chat-suggestions {
+  padding: 0 20px 15px;
+}
+
+.chat-suggestions button {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #bbb;
+  padding: 9px;
+  margin-top: 7px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #111;
+}
+
+#footnote-input {
+  flex: 1;
+  border: none;
+  padding: 15px;
+  outline: none;
+}
+
+#footnote-send {
+  border: none;
+  border-left: 1px solid #111;
+  background: white;
+  padding: 0 18px;
+  cursor: pointer;
+}
