@@ -42,3 +42,8 @@ The project is hosted using GitHub Pages.
 This was one of my first attempts at turning an idea into an actual working website. I learned how separate HTML pages connect, how CSS can completely change the feeling of a site, and how to deploy a project so other people can actually use it.
 
 There are still things I want to improve, but this is the first working version of Footnote.
+## Screenshots
+<img width="1180" height="820" alt="IMG_2402" src="https://github.com/user-attachments/assets/2ae474af-3afd-47f3-a025-4e0d73229a3c" />
+<img width="1180" height="820" alt="IMG_2401" src="https://github.com/user-attachments/assets/c2934d9b-c956-48b9-b1b1-b361bd0f962c" />
+<img width="1180" height="820" alt="IMG_2400" src="https://github.com/user-attachments/assets/39cb2a6e-da02-4113-a6f8-d99f535e926d" />
+
