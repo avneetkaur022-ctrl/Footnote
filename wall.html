@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Thought Wall — Footnote</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    .wall-page {
+      min-height: 100vh;
+      padding: 50px 6% 120px;
+      overflow: hidden;
+    }
+
+    .wall-top {
+      max-width: 900px;
+      margin-bottom: 70px;
+    }
+
+    .wall-back {
+      display: inline-block;
+      margin-bottom: 55px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+
+    .wall-label {
+      font-size: 11px;
+      letter-spacing: 4px;
+      margin-bottom: 15px;
+    }
+
+    .wall-title {
+      font-size: clamp(55px, 10vw, 120px);
+      line-height: 0.85;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .wall-intro {
+      max-width: 600px;
+      margin-top: 30px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .thought-wall {
+      position: relative;
+
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+      gap: 35px 20px;
+
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .note {
+      position: relative;
+
+      padding: 30px;
+
+      border: 1px solid currentColor;
+
+      background: #f5f0e6;
+
+      box-shadow: 7px 8px 0 rgba(0, 0, 0, 0.08);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .note:hover {
+      transform: rotate(0deg) translateY(-6px) !important;
+
+      box-shadow: 10px 14px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    .note-small {
+      font-size: 10px;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    .note h2 {
+      font-size: clamp(25px, 4vw, 46px);
+      line-height: 1.05;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .note p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .note-big {
+      grid-column: span 7;
+      transform: rotate(-1.5deg);
+    }
+
+    .note-medium {
+      grid-column: span 5;
+      transform: rotate(1.8deg);
+    }
+
+    .note-left {
+      grid-column: 2 / span 5;
+      transform: rotate(-2deg);
+    }
+
+    .note-right {
+      grid-column: 7 / span 5;
+      transform: rotate(1deg);
+    }
+
+    .scribble {
+      font-style: italic;
+      font-size: 20px !important;
+    }
+
+    .highlight {
+      display: inline;
+      padding: 2px 5px;
+
+      background:
+        linear-gradient(
+          transparent 55%,
+          rgba(255, 220, 80, 0.55) 55%
+        );
+    }
+
+    .tape {
+      position: absolute;
+
+      width: 80px;
+      height: 24px;
+
+      top: -13px;
+      left: 50%;
+
+      transform: translateX(-50%) rotate(-3deg);
+
+      background: rgba(220, 205, 170, 0.65);
+    }
+
+    .stamp {
+      display: inline-block;
+
+      border: 1px solid currentColor;
+
+      padding: 8px 12px;
+
+      font-size: 10px;
+      letter-spacing: 3px;
+
+      transform: rotate(-5deg);
+
+      margin-top: 25px;
+    }
+
+    .wall-question {
+      grid-column: 1 / -1;
+
+      margin: 70px 0;
+
+      text-align: center;
+    }
+
+    .wall-question p {
+      font-size: 11px;
+      letter-spacing: 4px;
+    }
+
+    .wall-question h2 {
+      max-width: 800px;
+      margin: 20px auto;
+
+      font-size: clamp(35px, 6vw, 70px);
+      line-height: 1.05;
+
+      font-weight: normal;
+    }
+
+    .tiny-footnote {
+      grid-column: 4 / span 6;
+
+      text-align: center;
+
+      padding: 50px 20px;
+
+      font-style: italic;
+    }
+
+    body.dark-mode .note {
+      background: #191919;
+      color: #f5f1e8;
+    }
+
+    body.dark-mode .highlight {
+      background:
+        linear-gradient(
+          transparent 55%,
+          rgba(190, 155, 50, 0.45) 55%
+        );
+    }
+
+    @media (max-width: 700px) {
+
+      .thought-wall {
+        display: block;
+      }
+
+      .note {
+        margin-bottom: 35px;
+        transform: rotate(0deg);
+      }
+
+      .wall-question {
+        margin: 70px 0;
+      }
+
+      .tiny-footnote {
+        padding: 40px 10px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <main class="wall-page">
+
+    <div class="wall-top">
+
+      <a class="wall-back" href="index.html">
+        ← BACK TO FOOTNOTE
+      </a>
+
+      <p class="wall-label">
+        ARCHIVE 004 · UNFINISHED THOUGHTS
+      </p>
+
+      <h1 class="wall-title">
+        THE<br>THOUGHT<br>WALL
+      </h1>
+
+      <p class="wall-intro">
+        Questions, fragments and ideas that did not fit neatly
+        inside a headline. Some thoughts are answers.
+        Others are only the beginning of better questions.
+      </p>
+
+    </div>
+
+
+    <section class="thought-wall">
+
+
+      <article class="note note-big">
+
+        <div class="tape"></div>
+
+        <p class="note-small">
+          FOUND IN THE MARGIN · 001
+        </p>
+
+        <h2>
+          Who gets to decide
+          <span class="highlight">
+            what deserves our attention?
+          </span>
+        </h2>
+
+        <p>
+          A headline does more than describe an event.
+          It decides which part of that event becomes visible.
+        </p>
+
+      </article>
+
+
+      <article class="note note-medium">
+
+        <p class="note-small">
+          QUESTION · 002
+        </p>
+
+        <h2>
+          What if merit measures opportunity
+          as much as ability?
+        </h2>
+
+        <p class="scribble">
+          Same finish line ≠ same starting point.
+        </p>
+
+        <span class="stamp">
+          QUESTION THE START
+        </span>
+
+      </article>
+
+
+      <article class="note note-left">
+
+        <div class="tape"></div>
+
+        <p class="note-small">
+          CULTURE · 003
+        </p>
+
+        <h2>
+          Lazy.<br>
+          Entitled.<br>
+          Rebellious.
+        </h2>
+
+        <p>
+          A generation can become a stereotype
+          before it gets the chance to describe itself.
+        </p>
+
+      </article>
+
+
+      <article class="note note-right">
+
+        <p class="note-small">
+          REMEMBER THIS · 004
+        </p>
+
+        <h2>
+          The power in people is greater than
+          the people in power.
+        </h2>
+
+        <span class="stamp">
+          FOOTNOTE
+        </span>
+
+      </article>
+
+
+      <div class="wall-question">
+
+        <p>
+          SOMETHING TO SIT WITH
+        </p>
+
+        <h2>
+          If you only know the headline,
+          how much of the story do you actually know?
+        </h2>
+
+      </div>
+
+
+      <article class="note note-medium">
+
+        <p class="note-small">
+          THREE LENSES · 005
+        </p>
+
+        <h2>
+          One event.<br>
+          Three questions.
+        </h2>
+
+        <p>
+          History asks what came before.
+          Law asks what can change.
+          Economics asks who bears the cost.
+        </p>
+
+      </article>
+
+
+      <article class="note note-big">
+
+        <div class="tape"></div>
+
+        <p class="note-small">
+          IDEAS · 006
+        </p>
+
+        <h2>
+          Ideas are not meant merely to exist.
+        </h2>
+
+        <p class="scribble">
+          They create the depth from which
+          the essence of a revolution can emerge.
+        </p>
+
+      </article>
+
+
+      <article class="note note-left">
+
+        <p class="note-small">
+          NEWS CYCLE · 007
+        </p>
+
+        <h2>
+          The cameras leave.
+        </h2>
+
+        <p>
+          The consequences don't.
+        </p>
+
+        <p class="scribble">
+          What happens after everyone stops watching?
+        </p>
+
+      </article>
+
+
+      <article class="note note-right">
+
+        <div class="tape"></div>
+
+        <p class="note-small">
+          RULE NO. 01
+        </p>
+
+        <h2>
+          Read.<br>
+          Question.<br>
+          Unfold.
+        </h2>
+
+        <span class="stamp">
+          LOOK CLOSER
+        </span>
+
+      </article>
+
+
+      <div class="tiny-footnote">
+
+        <p>
+          P.S. You made it past the headline.
+        </p>
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+  <script src="assistant.js"></script>
+
+</body>
+
+</html>
