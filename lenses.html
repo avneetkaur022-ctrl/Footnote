@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Lenses — Footnote</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .lens-page {
+      max-width: 950px;
+      margin: auto;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    .lens-page h2 {
+      font-size: clamp(48px, 8vw, 85px);
+      font-weight: normal;
+      line-height: 0.95;
+      margin-bottom: 30px;
+    }
+
+    .intro {
+      max-width: 650px;
+      font-size: 20px;
+      margin-bottom: 55px;
+    }
+
+    .headline-box {
+      border-top: 1px solid #171717;
+      border-bottom: 1px solid #171717;
+      padding: 35px 0;
+      margin-bottom: 45px;
+    }
+
+    .headline-box span {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+    }
+
+    .headline-box h3 {
+      font-size: 32px;
+      font-weight: normal;
+      margin-top: 12px;
+    }
+
+    .lens-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .lens-button {
+      background: transparent;
+      border: 1px solid #171717;
+      padding: 13px 22px;
+      cursor: pointer;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .lens-button.active {
+      background: #171717;
+      color: #f4f0e8;
+    }
+
+    .lens-content {
+      display: none;
+      padding: 35px;
+      border: 1px solid #777;
+      min-height: 250px;
+    }
+
+    .lens-content.active {
+      display: block;
+    }
+
+    .lens-content span {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+    }
+
+    .lens-content h3 {
+      font-size: 35px;
+      font-weight: normal;
+      margin: 15px 0;
+    }
+
+    .lens-content p {
+      font-size: 18px;
+      max-width: 720px;
+    }
+
+    .lens-question {
+      margin-top: 55px;
+      padding-top: 30px;
+      border-top: 1px solid #171717;
+    }
+
+    .lens-question span {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+    }
+
+    .lens-question h3 {
+      font-size: 34px;
+      font-weight: normal;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .lens-page {
+        padding: 50px 0;
+      }
+
+      .lens-content {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>FOOTNOTE</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="stories.html">Stories</a>
+    <a href="lenses.html">Three Lenses</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="lens-page">
+
+    <p class="eyebrow">ONE HEADLINE · THREE LENSES</p>
+
+    <h2>A headline changes depending on where you stand.</h2>
+
+    <p class="intro">
+      News rarely belongs to one subject. Explore the same issue through
+      history, law, and economics — and watch the story change.
+    </p>
+
+    <div class="headline-box">
+      <span>TODAY'S QUESTION</span>
+      <h3>What happens after a protest leaves the headlines?</h3>
+    </div>
+
+    <div class="lens-buttons">
+      <button class="lens-button active" onclick="showLens('history', this)">
+        HISTORY
+      </button>
+
+      <button class="lens-button" onclick="showLens('law', this)">
+        LAW
+      </button>
+
+      <button class="lens-button" onclick="showLens('economics', this)">
+        ECONOMICS
+      </button>
+    </div>
+
+    <div id="history" class="lens-content active">
+      <span>LENS 01</span>
+      <h3>History asks: what came before?</h3>
+      <p>
+        A protest rarely begins on the day people enter the streets.
+        Historical decisions, earlier movements, political promises and
+        unresolved conflicts can shape demands for years before they
+        become a headline.
+      </p>
+    </div>
+
+    <div id="law" class="lens-content">
+      <span>LENS 02</span>
+      <h3>Law asks: what can actually change?</h3>
+      <p>
+        Public pressure can demand reform, but lasting change often moves
+        through constitutions, courts, legislation and institutions.
+        Looking through a legal lens separates a political demand from
+        the mechanisms required to make it enforceable.
+      </p>
+    </div>
+
+    <div id="economics" class="lens-content">
+      <span>LENS 03</span>
+      <h3>Economics asks: who bears the cost?</h3>
+      <p>
+        Political decisions also distribute resources, opportunities and
+        costs. An economic lens asks who gains, who loses, and whether the
+        material conditions behind a movement remain after public
+        attention disappears.
+      </p>
+    </div>
+
+    <div class="lens-question">
+      <span>THE FOOTNOTE</span>
+      <h3>
+        Maybe understanding the news requires changing the lens,
+        not just reading another headline.
+      </h3>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>Footnote — Look beyond the headline.</p>
+</footer>
+
+<script>
+  function showLens(lensId, button) {
+    const lenses = document.querySelectorAll(".lens-content");
+    const buttons = document.querySelectorAll(".lens-button");
+
+    lenses.forEach(lens => lens.classList.remove("active"));
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    document.getElementById(lensId).classList.add("active");
+    button.classList.add("active");
+  }
+</script>
+
+</body>
+</html>
