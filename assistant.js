@@ -206,3 +206,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+// DARK MODE
+
+const darkModeButton = document.createElement("button");
+
+darkModeButton.id = "dark-mode-toggle";
+darkModeButton.textContent = "☾ DARK";
+
+document.body.appendChild(darkModeButton);
+
+if (localStorage.getItem("footnote-theme") === "dark") {
+  document.body.classList.add("dark-mode");
+  darkModeButton.textContent = "☀ LIGHT";
+}
+
+darkModeButton.addEventListener("click", function () {
+
+  document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    darkModeButton.textContent = "☀ LIGHT";
+    localStorage.setItem("footnote-theme", "dark");
+  } else {
+    darkModeButton.textContent = "☾ DARK";
+    localStorage.setItem("footnote-theme", "light");
+  }
+
+});
