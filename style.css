@@ -638,3 +638,111 @@ body.dark-mode .editorial-highlight {
     transparent 90%
   );
 }
+/* =========================
+   RABBIT HOLE
+   ========================= */
+
+.rabbit-hole {
+  position: relative;
+  margin: 100px 0 40px;
+  padding: 55px 45px;
+  border: 1px solid currentColor;
+  overflow: hidden;
+}
+
+.rabbit-label {
+  margin: 0 0 35px;
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  opacity: 0.65;
+}
+
+.rabbit-hole h2 {
+  margin: 0 0 55px;
+  max-width: 700px;
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 6vw, 72px);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.rabbit-hole h2 em {
+  font-weight: normal;
+}
+
+.rabbit-links {
+  border-top: 1px solid currentColor;
+}
+
+.rabbit-links a {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+
+  padding: 20px 5px;
+  border-bottom: 1px solid currentColor;
+
+  color: inherit;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+
+  transition: 0.2s ease;
+}
+
+.rabbit-links a span {
+  opacity: 0.45;
+}
+
+.rabbit-links a:hover {
+  padding-left: 18px;
+  font-style: italic;
+}
+
+.rabbit-end {
+  margin: 35px 0 0;
+  text-align: right;
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+/* archival stamp */
+
+.rabbit-hole::after {
+  content: "KEEP LOOKING";
+
+  position: absolute;
+  top: 35px;
+  right: 30px;
+
+  padding: 8px 12px;
+  border: 1px solid currentColor;
+
+  font-family: monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+
+  transform: rotate(7deg);
+  opacity: 0.4;
+}
+
+@media (max-width: 700px) {
+  .rabbit-hole {
+    padding: 40px 22px;
+    margin-top: 70px;
+  }
+
+  .rabbit-hole h2 {
+    font-size: 40px;
+  }
+
+  .rabbit-hole::after {
+    top: 15px;
+    right: 15px;
+    font-size: 7px;
+  }
+}
