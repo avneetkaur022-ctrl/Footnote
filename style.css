@@ -771,3 +771,25 @@ body::before {
 body.dark-mode::before {
   opacity: 0.025;
 }
+/* VERTICAL ARCHIVE MARK */
+
+.archive-mark {
+  position: fixed;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+
+  font-family: monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  opacity: 0.4;
+
+  z-index: 20;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .archive-mark {
+    display: none;
+  }
+}
