@@ -613,3 +613,28 @@ body.dark-mode .wall-enter:hover {
     max-width: 230px;
   }
 }
+/* EDITORIAL HIGHLIGHT */
+
+.editorial-highlight {
+  color: inherit;
+  background: linear-gradient(
+    transparent 55%,
+    rgba(235, 215, 120, 0.65) 55%,
+    rgba(235, 215, 120, 0.65) 90%,
+    transparent 90%
+  );
+
+  padding: 0 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+body.dark-mode .editorial-highlight {
+  color: inherit;
+  background: linear-gradient(
+    transparent 55%,
+    rgba(210, 190, 95, 0.35) 55%,
+    rgba(210, 190, 95, 0.35) 90%,
+    transparent 90%
+  );
+}
