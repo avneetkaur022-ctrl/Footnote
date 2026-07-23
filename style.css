@@ -793,3 +793,71 @@ body.dark-mode::before {
     display: none;
   }
 }
+/* RANDOM FOOTNOTE */
+
+.random-footnote {
+  margin: 90px auto 40px;
+  padding: 55px 45px;
+  max-width: 720px;
+  background: #f4efe6;
+  border: 1px solid #1d1d1d;
+  position: relative;
+  transform: rotate(-0.6deg);
+  box-shadow: 8px 8px 0 #1d1d1d;
+}
+
+.random-footnote::before {
+  content: "✦";
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 22px;
+}
+
+.random-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.random-footnote h2 {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 38px;
+  margin-bottom: 25px;
+}
+
+#random-thought {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  line-height: 1.6;
+  min-height: 65px;
+}
+
+#new-footnote {
+  margin-top: 25px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #1d1d1d;
+  padding: 7px 0;
+  font: inherit;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+#new-footnote:hover {
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  .random-footnote {
+    margin: 60px 18px 30px;
+    padding: 40px 25px;
+    transform: rotate(-0.3deg);
+  }
+
+  .random-footnote h2 {
+    font-size: 30px;
+  }
+}
