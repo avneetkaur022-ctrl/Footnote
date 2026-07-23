@@ -233,3 +233,31 @@ darkModeButton.addEventListener("click", function () {
   }
 
 });
+// RANDOM FOOTNOTE GENERATOR
+
+const footnotes = [
+  "The loudest part of a story is sometimes what was never said.",
+  "A headline tells you what happened. Context asks why.",
+  "Every statistic was a person before it became a number.",
+  "The first version of history is rarely the final one.",
+  "Sometimes the most important question is the one nobody asked.",
+  "Certainty makes good headlines. Curiosity makes better understanding.",
+  "Look closer. The footnote might change the whole story.",
+  "What disappears when a complicated story becomes a single sentence?"
+];
+
+const randomThought = document.getElementById("random-thought");
+const newFootnoteButton = document.getElementById("new-footnote");
+
+if (randomThought && newFootnoteButton) {
+  newFootnoteButton.addEventListener("click", function () {
+    let nextFootnote;
+
+    do {
+      nextFootnote =
+        footnotes[Math.floor(Math.random() * footnotes.length)];
+    } while (nextFootnote === randomThought.textContent.trim());
+
+    randomThought.textContent = nextFootnote;
+  });
+}
