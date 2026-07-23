@@ -746,3 +746,28 @@ body.dark-mode .editorial-highlight {
     font-size: 7px;
   }
 }
+/* SUBTLE PAPER TEXTURE */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99999;
+
+  opacity: 0.035;
+
+  background-image:
+    repeating-radial-gradient(
+      circle at 0 0,
+      currentColor 0,
+      transparent 1px,
+      transparent 4px
+    );
+
+  background-size: 7px 7px;
+}
+
+body.dark-mode::before {
+  opacity: 0.025;
+}
