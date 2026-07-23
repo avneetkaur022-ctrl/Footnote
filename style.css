@@ -563,3 +563,53 @@ body.dark-mode .wall-enter:hover {
     transform: rotate(3deg);
   }
 }
+/* FOUND IN THE MARGINS */
+
+.margin-note {
+  position: relative;
+  max-width: 260px;
+  margin: 45px 0 45px auto;
+  padding: 18px 20px;
+
+  border-left: 2px solid currentColor;
+  transform: rotate(-1.5deg);
+
+  font-family: Georgia, serif;
+}
+
+.margin-note span {
+  display: block;
+  margin-bottom: 10px;
+
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.margin-note p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* tiny handwritten-ish underline */
+
+.margin-note::after {
+  content: "";
+  display: block;
+  width: 70%;
+  margin-top: 12px;
+
+  border-bottom: 1px solid currentColor;
+  transform: rotate(2deg);
+  opacity: 0.5;
+}
+
+@media (max-width: 700px) {
+  .margin-note {
+    margin: 35px 0 35px 25px;
+    max-width: 230px;
+  }
+}
